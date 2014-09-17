@@ -7,14 +7,34 @@
 //that will process data and through arithmetic equations 
 //will calculate the distance, time and miles per hour of a trip on a bicycle
 
-
-
+        import java.util.Scanner;
+        //Import of the scanner
         public class Bicycle{
+            //Start of main method
             public static void main (String [] args) {
-                int secs=480;
-                //Time in seconds for the trip
-                int counts=1561;
-                //Number of revolutions for the trip
+                //Start of main method
+                Scanner myScanner;
+                //Declaring my scanner
+                myScanner = new Scanner (System.in);
+                //Constructing the scanner
+                
+                
+                System.out.print("Enter the number of seconds: ");
+                //Prints the space for the value of the time of the 
+                //trip in seconds
+                double nSeconds = myScanner.nextDouble();
+                
+                System.out.print("Enter the number of counts: ");
+                //Prints the space for the value of the number of 
+                //counts of the trip
+                int nCounts = myScanner.nextInt();
+                
+                
+                
+                double secs=480;
+                //Value of the time in secs
+                double counts=1561;
+                //Value of the counts 
                 double wheelDiameter=27.0,
                 //Diameter of the wheel
                 PI=3.14159,
@@ -29,29 +49,20 @@
                 secondsPerMinute=60;
                 //The conversion units to change the time
                 //from seconds to minutes
-                double distanceTrip;
+                double distanceTrip=counts*wheelDiameter*PI;
                 //Declares the variable that represents the distance
-                double minutes;
+                double minutes=(secs/secondsPerMinute);
                 //Declares the variable that represents the time in mins
-                double hours;
+                double hours=minutes/60;
                 //Declares the variable that represents the time in hours
                 
-                distanceTrip=counts*wheelDiameter*PI;
-                //Declares the value acquired through the calculation of distance
+                
                 distanceTrip/=inchesPerFoot*feetPerMile;
                 //Converts the value of the distance from inches to feet and then
                 //from feet to miles
-                minutes=(secs/secondsPerMinute);
-                //Calculates the time in minutes
-                hours=minutes/60;
-                //Converts the time in minutes to hours
                 
-                System.out.println("Enter the number of seconds: "
-                + (secs));
-                //Prints the value of the time of the trip in seconds
-                System.out.println("Enter the number of counts: " 
-                + (counts));
-                //Prints the value of the number of counts of the trip
+        
+                
                 System.out.println("The distance was " +
                 ((double)((int)(distanceTrip*100))/100) +
                 " miles and took " +minutes+ " minutes");
