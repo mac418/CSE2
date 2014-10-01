@@ -3,7 +3,10 @@
 //September 30, 2014
 //CSE02 Section 112
 //Professor Brian Chen
-//Purpose:
+//Purpose:Create a program that asks the user to order their food at burger king
+//It gives the option between burgers, fries and soda
+//Within each characteristic there are other questions, burgers:fixins,
+//soda:flavors, and fries:size
  
  
  
@@ -21,14 +24,12 @@
             System.out.println
             ("Enter a letter to indicate a choice of\nBurger (B or b)\nFries (F or f)\nSoda (S or s)");
             String choice = myScanner.nextLine();
-                
+                //scanner asks the first option with this print statement
                 switch (choice){
                 default: 
-                System.out.println
-                ("A single character expected"); 
                 System.out.println("You did not enter any of B, b, S, s, F, or f");
                     return;
-              
+              //switch case that provides the options for burger, fries and soda
                 
                     case "b": case "B":
                         System.out.println
@@ -44,7 +45,8 @@
                             default:
                                 System.out.println("You did not enter any of the options for fixins");
                                 return;
-                        }
+                        }//switch case that sets the options for the fixins and the reply whenever 
+                        //the letter correspoding to the fixin option is entered
                     case "f": case "F":
                         System.out.println
                         ("Do you want a large or small order of fries (l,L,s, or S)");
@@ -57,7 +59,8 @@
                             default:
                                 System.out.println("You did not enter any of the sizes for fries");
                                 return;
-                        }
+                        }//switch case that sets the options for the fries sizes and the reply whenever 
+                        //the letter correspoding to the size option is entered
                     case "S": case "s":
                         System.out.println
                         ("Do you want Pepsi (p or P),\nCoke (c or C),\nSprite (s or S)\nor Mountain Dew (M or m)");
@@ -79,7 +82,8 @@
                             System.out.println
                             ("You did not enter any of the flavor options");
                             return;
-                        }
+                        }//switch case that sets the options for the flavors and the reply whenever 
+                        //the letter correspoding to the flavor option is entered
                         break;
                     
                 }
