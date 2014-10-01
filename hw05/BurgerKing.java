@@ -25,6 +25,7 @@
             ("Enter a letter to indicate a choice of\nBurger (B or b)\nFries (F or f)\nSoda (S or s)");
             String choice = myScanner.nextLine();
                 //scanner asks the first option with this print statement
+                
                 switch (choice){
                 default: 
                 System.out.println("You did not enter any of B, b, S, s, F, or f");
