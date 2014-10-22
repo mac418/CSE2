@@ -77,17 +77,15 @@ import java.util.Scanner;
                 while (r <= i) {
                    //Makes the rows 
                    
-                   //centers
-                   (k<=(n-i-1)){
-                    System.out.print(" ");
-                    k++;
-                    }
                     int m = 1;
                     while (m <= y) {
                         System.out.print(i);
                         m++;
                     
-                    
+                    while(k<=(n-i-1)){
+                    System.out.print(" ");
+                    k++;
+                    }
                     }
                     
                     
