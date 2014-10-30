@@ -69,19 +69,18 @@ import java.util.Scanner;
                 int y = i + (i-1);
 
                 int r = 1;
+                while (r <= i) {
+                   //Makes the rows 
+                    
                 //Centers the pyramid
                 while(k<=(n-i-1)){
                     System.out.print(" ");
                     k++;
-                }
-                while (r <= i) {
-                   //Makes the rows 
-                   
+                
                     int m = 1;
                     while (m <= y) {
                         System.out.print(i);
                         m++;
-                    
                     while(k<=(n-i-1)){
                     System.out.print(" ");
                     k++;
@@ -91,13 +90,13 @@ import java.util.Scanner;
                     
                     System.out.print("\n");
                     r++;
-                }
-                 k = 1;
+                
+                
                  
-                    
-                while (k <= y) {
+                int x=1;    
+                while (x<=y) {
                     System.out.print("-");
-                    k++;
+                    x++;
                 //makes the dashes between stacks
                 //centers the pyramid
                     while(k<=(n-i-1)){
@@ -109,6 +108,7 @@ import java.util.Scanner;
                     
                 System.out.print("\n");
                 i++;
+            }
             }
             System.out.print("\n");
         
