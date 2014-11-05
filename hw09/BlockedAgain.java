@@ -93,10 +93,7 @@ public class BlockedAgain{
     
     
     public static void line(int k){
-    
-  //  for (int c =0; c <= k+(k-1); k++){
-  //                  System.out.print(" ");
-  //  }
+
             
         for (int i = 1; i <= (k*2)-1; i++){
         // prints the number, its corresponding number of times in a line 
