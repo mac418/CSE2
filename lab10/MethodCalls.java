@@ -16,14 +16,20 @@ public class MethodCalls{
         System.out.println("Join -9 and -90 to get "+join(-9,-90));
     }
     
-    public static int addDigit( int number, int digit){
-        
-      
-       
-            
-        }
-       }
+    public static int addDigit( int x, int y){
+        String number = Integer.toString(x);
+        String digit = Integer.toString(y);
+        String z = digit+number;
+        int q = Integer.parseInt(z);
+        return q;
     }
     
+    public static int join( int i, int k){
+        String j = Integer.toString(i);
+        String n = Integer.toString(k);
+        String c = j+n;
+        int p = Integer.parseInt(c);
+        return p;
+    } 
     
 }  

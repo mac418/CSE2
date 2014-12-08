@@ -20,37 +20,31 @@ public class Methods{
                        ", and "+c+" are in ascending order");
   }
   
-  public static int getInt(int y, Scanner scan){
-      
+  public static int getInt(Scanner x){
+      x = new Scanner(System.in);
       System.out.print("Enter an int: ");
-      
+    while (true) {
       if (x.hasNextInt()) 
       {
-          y = x.HasNextInt();
-          return x;}
+          int y = x.nextInt();
+          return y;}
         
         else {
-            return System.out.print("You did not enter an int. Try again: ");
+            System.out.print("You did not enter an int. Try again: ");
         }
-      
+    }  
       
   }
   
-  public int larger(int a, int b){
+  public static int larger(int j, int k){
       
-      if (a>b) {return a;}
+      if (j>k) {return j;}
       
-      else {return b;}
+      else {return k;}
   }
   
-  public int larger(int b, int c){
-      
-      if (c>b) {return c;}
-      
-      else {return b;}
-  }
   
-  public boolean ascending(int a, int b, int c){
+  public static boolean ascending(int a, int b, int c){
       
       if (a<b && b<c) {return true;}
       else {return false;}

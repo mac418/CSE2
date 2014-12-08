@@ -115,9 +115,9 @@ import java.util.Scanner;
             
     System.out.println("Using do-while loops: ");
             i=1;
-            int y, j;
+            int g, j;
             do{
-                y = i+(i-1);
+                g = i+(i-1);
                 j = 1;
                 //makes rows
                 do{
@@ -127,7 +127,7 @@ import java.util.Scanner;
                         k++;
                     
                     }//makes the columns
-                    while (k<=y);
+                    while (k<=g);
                         System.out.print("\n");
                         j++;
                 }
@@ -138,7 +138,7 @@ import java.util.Scanner;
                     k++;
                     //makes dash lines
                 }
-                while (k<=y);
+                while (k<=g);
                 System.out.print("\n");
                 i++;
             //makes spaces between stacks
@@ -153,3 +153,4 @@ import java.util.Scanner;
                 
           
     }
+}

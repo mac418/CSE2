@@ -1,4 +1,3 @@
-
 /*Sample of expected output:
  *   Enter an int- 9
  *   You entered 9
@@ -10,13 +9,14 @@ import java.util.Scanner;
 public class Enigma0{
   public static void main(String arg []){
     System.out.print("Enter an int- ");
-    Scanner scan=new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
+    int n;
     if(scan.hasNextInt()){
-      int n=scan.nextInt();
+      n = scan.nextInt();
       System.out.println("You entered "+n);
     }
     else{
-      int n=4;
+      n=4;
       System.out.println("You entered "+n);
     }
     
@@ -31,6 +31,7 @@ public class Enigma0{
 }
 
 /* Error report:
+      n on line 22 had not been initialized
  *   Expand this comment:
  *   Explain the error(s) that occurred here, and then fix them
  */

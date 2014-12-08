@@ -11,51 +11,59 @@ public class RaggedArray{
             int k = j*3+5;
             raggedArray[j] = new int [k];
         
-        for (int a = 0; a < k; a++){
-            int randomNum = num.nextInt(39);
+            for (int a = 0; a < k; a++){
+                int randomNum = num.nextInt(39);
         
-            raggedArray[0][a] = randomNum;
+                raggedArray[j][a] = randomNum;
            
-        }
-         for (int a = 0; a < k; a++){
-            int randomNum = num.nextInt(39);
-        
-            raggedArray[1][a] = randomNum;
-           
-        }
-         for (int a = 0; a < k; a++){
-            int randomNum = num.nextInt(39);
-        
-            raggedArray[2][a] = randomNum;
-           
-        }
-         for (int a = 0; a < k; a++){
-            int randomNum = num.nextInt(39);
-        
-            raggedArray[3][a] = randomNum;
-           
-        }
-         for (int a = 0; a < k; a++){
-            int randomNum = num.nextInt(39);
-        
-            raggedArray[4][a] = randomNum;
-          
-        }
+            }
         
         }
         System.out.println("Array before sorting");
         
-        for (int a = 0; a < raggedArray[a].length; a++){
-        int b = 0;
+        for (int a = 0; a < 5; a++){
+            
+            for (int b = 0; b < raggedArray[a].length; b++){
+                
+            System.out.print(raggedArray[a][b]+" ");
         
-        System.out.print(raggedArray[a][b]+" /n");
-        
-        b++;
     
+            }
+            System.out.println("");
         }
+       for (int y = 0; y < raggedArray.length; y++){ 
+        sort(raggedArray[y]);
+    
+       }
+       
+       System.out.println("Array after sorting");
         
+        for (int a = 0; a < 5; a++){
+            
+            for (int b = 0; b < raggedArray[a].length; b++){
+                
+            System.out.print(raggedArray[a][b]+" ");
         
-        
-        
+    
+            }
+            System.out.println("");
+        }
     }
+    
+    public static void sort(int[] arrayInput){
+        for (int c = 0; c < arrayInput.length; c++){
+            int currentMin = arrayInput[c];
+            int currentIndex = c;
+            for(int d = c; d < arrayInput.length; d++){
+                if(arrayInput[d] < currentMin){
+                    currentMin = arrayInput[d];
+                    currentIndex = d;
+                }
+            }
+        int temp = arrayInput[c];
+        arrayInput[c] = currentMin;
+        arrayInput[currentIndex] = temp;
+        }
+    }
+
 }

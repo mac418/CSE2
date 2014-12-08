@@ -39,16 +39,22 @@ public class Arrays{
     int sum = 0;
         for (int i = 0; i < array.length; i++){
         sum += array[i];
-        }
+        }//Adds numbers of the array
         
         
     int[] array2 = new int[array.length];
 
         for (int i=0; i<array.length; i++){
-	    array2[i] = array[10-i];
+	        array2[i] = array[10-i];
         }//copies and swaps the values of array to array2
         
-        
+     for (int low = 0; low < array2.length; low++){
+         System.out.println(array2[low]+"");
+            for(int higher = array2.length; higher > 0; higher--){
+             System.out.print(array2[higher]);
+            }
+     }   
         
     }
+    
 }

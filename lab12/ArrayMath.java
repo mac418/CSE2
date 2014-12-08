@@ -11,34 +11,49 @@ public class ArrayMath{
     System.out.println(display(x)+" \n  + " + display(y) + "\n   = " +display(v));
     System.out.println(display(x)+" \n  + " + display(z) + "\n   = " 
                          +display(addArrays(x,z)));
-   /* System.out.println("It is " + equals(x,y)+" that "+display(x)+
+    System.out.println("It is " + equals(x,y)+" that "+display(x)+
                        " == "+display(y));
     System.out.println("It is " + equals(z,w)+" that "+display(z)+
                        " == "+display(w));
     System.out.println("It is " + equals(u,z)+" that "+display(u)+
                        " == "+display(z));
-*/
+
   }
   
   public static double [] addArrays( double [] x, double [] y){
      int z;
-     
+     int smaller;
       if (x.length > y.length){
            z = x.length;
+           smaller = y.length;
       }else{
-          z =y.length;
+          z = y.length;
+          smaller = x.length;
       }
       
       double [] addedArray = new double [z];
       
-      for (int i=1; i< addedArray.length; i++){
+      for (int i=0; i< smaller; i++){
           
        addedArray [i] = x[i] + y[i];
       }  
       
+      if (y.length > x.length){
+        for ( int a = smaller; a < z; a++){
+        
+          addedArray [a] = y[a];
+          
+        }
+      }else{
+        for ( int a = smaller; a < z; a++){
+        
+        addedArray [a] = x[a];
+      }
+        }
+      
   return addedArray;}
   
- /* public static boolean equals( double [] x, double [] y){
+  public static boolean equals( double [] x, double [] y){
     if (x.length == y.length){
      
      for (int i=1; i<x.length; i++){
@@ -53,7 +68,7 @@ public class ArrayMath{
  }
   return false;}
   
-*/
+
   
   public static String display(double [] x){
     String out="{";
