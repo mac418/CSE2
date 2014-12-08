@@ -1,6 +1,6 @@
-//Hw11:Poker Hands
+//Hw11: Poker Hands
 //Maria Castro
-//December 6, 2014
+//December 7, 2014
 //CSE02 Section 112
 //Professor Brian Chen
 //Purpose: To create a program that generates a hand with input form the user who is asked for the suit of the card and the rank
